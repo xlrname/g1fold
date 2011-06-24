@@ -1,0 +1,4 @@
+set title "Synthesized RNA vs. trained RNA folds"
+set xlabel "Length in bases"
+set ylabel "Minimum free energy * -1"
+plot "./randomSorted" lt rgb "red" title "synthesized", "./sorted.human" lt rgb "blue" title "trained" 

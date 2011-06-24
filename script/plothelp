@@ -1,0 +1,11 @@
+set title "Synthesized RNA vs. trained RNA folds"
+set xlabel "Length in bases"
+set ylabel "Minimum free energy * -1"
+set output "synt-trained.png"
+set term png size 1000, 800
+set style data dots
+f(x) = a*x+b
+g(x) = c*x+d
+fit f(x) "./trainedSorted" via a,b
+fit g(x) "./randomSorted" via c,d
+plot "./trainedSorted" lt rgb "blue" title "trained", "./randomSorted" lt rgb "red" title "synth", f(x) title "linear fit of trained", g(x) title "linear fit of synth", "./trainedStat" with errorbars title "trained mean with stdev" lt rgb "#00008B",  "./randomStat" with errorbars title "synth mean with stdev" lt rgb "#FF4500", "./realData" with points lt rgb "black" title "Group I Intron"

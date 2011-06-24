@@ -1,0 +1,10 @@
+instance mfepp = g1fold(mfe * pretty);
+instance mfeppsy = g1fold(mfe * pretty * symbolic);
+instance cmfeppsy = g1fold(classify * mfe * pretty * symbolic);
+instance pretty = g1fold(pretty) ;
+instance mfe = g1fold(mfe);
+instance ppmfe = g1fold(pretty * mfe);
+//instance seqmfepp = g1fold((seqcon * mfe) * pretty);
+//instance enfmfepp = g1fold((enforce * mfe) * pretty);
+//instance enfseqmfepp = g1fold(((enforce * seqcon) * mfe) * pretty);
+//instance shapemfepp = g1fold((shape5 * mfe) * pretty);
